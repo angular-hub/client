@@ -8,9 +8,11 @@ import { CategoriesComponent } from './categories/categories.component';
 import { HomeComponent } from './home/home.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 // tslint:disable-next-line: max-line-length
-import { NbThemeModule, NbLayoutModule, NbSidebarModule, NbMenuModule, NbCardModule, NbInputModule, NbButtonModule, NbSpinnerModule, NbSearchModule } from '@nebular/theme';
+import { NbThemeModule, NbLayoutModule, NbSidebarModule, NbMenuModule, NbCardModule, NbInputModule, NbButtonModule, NbSpinnerModule, NbSearchModule, } from '@nebular/theme';
 import { SidebarComponent } from './shared/components/sidebar/sidebar.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+import { LibraryComponent } from './shared/components/library/library.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     SearchComponent,
     CategoriesComponent,
     HomeComponent,
-    SidebarComponent
+    SidebarComponent,
+    LibraryComponent
   ],
   imports: [
     BrowserModule,
@@ -32,6 +35,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     NbButtonModule,
     NbSpinnerModule,
     NbSearchModule,
+    // NbEvaIconsModule,
     FormsModule,
     ReactiveFormsModule,
     NbMenuModule.forRoot()

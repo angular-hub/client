@@ -1,12 +1,35 @@
-<nb-layout>
+<!-- <nb-layout>
+
+  <nb-layout-header subheader>
+    
+  </nb-layout-header>
 
   <nb-sidebar>
+  </nb-sidebar>
+
+  <nb-layout-column class="colored-column-basic">
+    
+  </nb-layout-column>
+</nb-layout> -->
+
+<nb-layout>
+  <nb-layout-header fixed>
+    <h3 class="text-center">Search Here</h3>
+    <div>
+      <input type="text" #text nbInput [(ngModel)]='searchQuery' (keyup.enter)="getSearchQuery(text.value)">
+    </div>
+
+  </nb-layout-header>
+
+  <nb-sidebar tag="left">
     <app-sidebar (currCategory)='getLibrariesByCategory($event)'></app-sidebar>
   </nb-sidebar>
 
 
-  <nb-layout-column>
-    <app-home></app-home>
+  <nb-layout-column class="colored-column-warning">
+    <!-- <div class="searched">
+      <h4>You search for </h4> <span>{{searchQuery}}</span>
+    </div> -->
+    <app-library></app-library>
   </nb-layout-column>
-
 </nb-layout>

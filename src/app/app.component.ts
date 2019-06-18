@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnChanges } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
 
+  public searchQuery: string;
 
   ngOnInit() {
   }
@@ -14,4 +15,10 @@ export class AppComponent implements OnInit {
   getLibrariesByCategory(category: string) {
     console.log(category)
   }
+
+  getSearchQuery(stuff) {
+    console.log(stuff)
+    this.searchQuery = ''
+  }
+
 }
