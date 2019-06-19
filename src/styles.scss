@@ -3,14 +3,45 @@
 body{
   font-family: Montserrat, Avenir;
 }
+
 *{
-  font-family: Avenir !important ;
+  font-family: 'Nunito' !important ;
+  outline: none !important;
 }
+
 i{
   font-size: 23px;
-  margin-right: 10px;
+  margin-right: 20px;
 }
 
 h1, h2, h3,h4{
   font-family: Montserrat !important;
 }
+
+ul{
+  padding: 0px 16px !important;
+}
+
+a{
+  text-decoration: none !important;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+a:hover{
+  font-weight: bold;
+  transition: all .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  color: black !important;
+  zoom: 1.02;
+}
+
+.nb-theme-default nb-layout .layout nb-layout-header nav {
+height: inherit !important;
+display: flex;
+flex-direction: column;
+}
+
+.nb-theme-default nb-card{
+  cursor: pointer;
+}
+

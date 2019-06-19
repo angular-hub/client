@@ -1,15 +1,14 @@
-<nb-card class="mt-3 w-50">
+<nb-card class="w-75" (click)="showProjectMarkdown()">
 
   <nb-card-body class="text-secondary">
     <div class="d-flex align-items-center">
-      <h3>ng-bootstrap</h3>
+      <h3>{{library.name}}</h3>
       <span class="text-muted ml-2"> v12.0</span>
     </div>
-
-    The best angular library possible
+    {{library.description}}
     <div class="text-body mt-2">
-      <i class="icon ion-md-heart man"></i>
-      <i class="icon ion-md-download"></i>
+      <i class="icon ion-md-heart text-warning">{{library.stars | slangNo}}</i>
+      <i class="icon ion-md-download text-info">{{library.downloads | slangNo}}</i>
     </div>
   </nb-card-body>
 

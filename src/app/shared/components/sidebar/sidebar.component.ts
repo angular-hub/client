@@ -1,6 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { NbMenuItem } from '@nebular/theme';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Router, ActivatedRoute, Params } from '@angular/router';
 
 @Component({
   selector: 'app-sidebar',
@@ -8,10 +8,10 @@ import { Router, ActivatedRoute } from '@angular/router';
   styleUrls: ['./sidebar.component.scss']
 })
 
-export class SidebarComponent implements OnInit {
+export class SidebarComponent {
   constructor(private router: Router, public route: ActivatedRoute) { }
-  public category: string;
-  @Output() currCategory = new EventEmitter<string>();
+  public params: Params;
+  @Output() currParamsEvent = new EventEmitter<Params>();
 
   public categories: NbMenuItem[] = [
     { title: 'All', link: '/', queryParams: { category: 'all' } },
@@ -36,11 +36,13 @@ export class SidebarComponent implements OnInit {
     { title: 'Transforms', link: '/', queryParams: { category: 'transform' } },
   ];
 
-  ngOnInit() { }
 
-  getLibrariesByCategory(e) {
-    this.route.queryParams.subscribe(param => this.category = param.category);
-    this.currCategory.emit(this.category);
-
+  getParams(item) {
+    this.route.queryParams.subscribe(param => this.params = param);
+    this.currParamsEvent.emit(this.params);
+    this.router.navigate([item.link], {
+      queryParams: { ...item.queryParams },
+      queryParamsHandling: 'merge',
+    })
   }
 }

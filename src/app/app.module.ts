@@ -8,11 +8,14 @@ import { CategoriesComponent } from './categories/categories.component';
 import { HomeComponent } from './home/home.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 // tslint:disable-next-line: max-line-length
-import { NbThemeModule, NbLayoutModule, NbSidebarModule, NbMenuModule, NbCardModule, NbInputModule, NbButtonModule, NbSpinnerModule, NbSearchModule, } from '@nebular/theme';
+import { NbThemeModule, NbLayoutModule, NbSidebarModule, NbMenuModule, NbCardModule, NbInputModule, NbButtonModule, NbSpinnerModule, NbSearchModule, NbDialogModule, } from '@nebular/theme';
 import { SidebarComponent } from './shared/components/sidebar/sidebar.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { LibraryComponent } from './shared/components/library/library.component';
+import { SlangNoPipe } from './shared/pipes/slang-no.pipe';
+import { ProjectMarkdownComponent } from './shared/components/project-markdown/project-markdown.component';
+
 
 @NgModule({
   declarations: [
@@ -21,8 +24,11 @@ import { LibraryComponent } from './shared/components/library/library.component'
     CategoriesComponent,
     HomeComponent,
     SidebarComponent,
-    LibraryComponent
+    LibraryComponent,
+    SlangNoPipe,
+    ProjectMarkdownComponent,
   ],
+  entryComponents: [ProjectMarkdownComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -35,6 +41,7 @@ import { LibraryComponent } from './shared/components/library/library.component'
     NbButtonModule,
     NbSpinnerModule,
     NbSearchModule,
+    NbDialogModule.forRoot(),
     // NbEvaIconsModule,
     FormsModule,
     ReactiveFormsModule,
