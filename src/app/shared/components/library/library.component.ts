@@ -9,10 +9,16 @@ import { NbDialogService } from '@nebular/theme';
   styleUrls: ['./library.component.scss']
 })
 export class LibraryComponent implements OnInit {
-
   constructor(private dialogService: NbDialogService) { }
   // tslint:disable-next-line: max-line-length
-  @Input() library: Library = { name: 'ng-bootstrap', stars: 1090, description: '  The best angular library possible', downloads: 9000 };
+  @Input() public library: Library = {
+    name: 'ng-bootstrap',
+    stars: 1090,
+    description: 'The best angular library possible',
+    downloads: 9000,
+    version: '12.0',
+    by: '@mikepod'
+  };
 
   ngOnInit() {
   }
@@ -20,8 +26,9 @@ export class LibraryComponent implements OnInit {
   showProjectMarkdown() {
     this.dialogService.open(ProjectMarkdownComponent, {
       context: {
-        title: 'Title',
-        mardown: 'Nothing do so far'
+        // title: 'Title',
+        mardown: 'Nothing do so far',
+        library: this.library
       },
     });
   }

@@ -10,8 +10,8 @@ body{
 }
 
 i{
-  font-size: 23px;
-  margin-right: 20px;
+  font-size: 18px;
+  margin-right: 17px;
 }
 
 h1, h2, h3,h4{
@@ -45,3 +45,11 @@ flex-direction: column;
   cursor: pointer;
 }
 
+.nb-theme-default nb-card{
+  box-shadow: none !important;
+  border: 0 !important;
+}
+
+nav{
+  box-shadow: none !important;
+}

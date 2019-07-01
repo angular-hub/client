@@ -1,11 +1,31 @@
-<nb-card class="w-75 mx-auto">
+<nb-card class="w-75 mx-auto" status='danger'>
+
   <nb-card-header>
-    {{title}}
+    <h6 class="text-light">Angular</h6>
     <span class="float-right">
-      <button nbButton (click)="close()" class='bg-dark' size='small'>View on Github</button>
+      <button nbButton (click)="close()" class='bg-dark' size='small' (click)="goToProjectPage(library.link)">View on
+        Github</button>
     </span>
+
+    <div class="d-flex align-items-center text-light">
+      <h4 class="text-light">{{library.name}}</h4>
+      <span class=" ml-2"> v{{library.version}}</span>
+      <span class=" ml-1"> Last updated at {{library.last_updated}}</span>
+      <span class=" ml-2"> by {{library.by}}</span>
+    </div>
+
+    <div class="text-light mt-2">
+      <i class="icon ion-md-heart ">
+        <span>{{library.stars | slangNo}}</span>
+      </i>
+      <i class="icon ion-md-download ">
+        <span>{{library.downloads | slangNo}}</span>
+      </i>
+    </div>
+
   </nb-card-header>
-  <nb-card-body>
+
+  <nb-card-body class="w-75 mx-auto my-5">
     {{markdown}}
     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus dolores, molestias iste sit distinctio quaerat saepe
     doloremque mollitia iure. Fuga et cumque labore officiis earum quod eius tenetur. Ex incidunt nesciunt esse dolores

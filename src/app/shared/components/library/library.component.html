@@ -2,13 +2,23 @@
 
   <nb-card-body class="text-secondary">
     <div class="d-flex align-items-center">
-      <h3>{{library.name}}</h3>
-      <span class="text-muted ml-2"> v12.0</span>
+      <h4>{{library.name}}</h4>
+      <span class="text-muted ml-2"> v{{library.version}}</span>
+      <span class="text-muted ml-1"> Last updated at {{library.last_updated}}</span>
+      <span class="text-dark ml-2"> by {{library.by}}</span>
     </div>
-    {{library.description}}
+
+    <p>{{library.description}}</p>
+
     <div class="text-body mt-2">
-      <i class="icon ion-md-heart text-warning">{{library.stars | slangNo}}</i>
-      <i class="icon ion-md-download text-info">{{library.downloads | slangNo}}</i>
+      <i class="icon ion-md-heart text-warning">
+        <span>{{library.stars | slangNo}}</span>
+      </i>
+
+      <i class="icon ion-md-download text-info">
+        <span>{{library.downloads | slangNo}}</span>
+      </i>
+
     </div>
   </nb-card-body>
 

@@ -11,10 +11,11 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { NbThemeModule, NbLayoutModule, NbSidebarModule, NbMenuModule, NbCardModule, NbInputModule, NbButtonModule, NbSpinnerModule, NbSearchModule, NbDialogModule, } from '@nebular/theme';
 import { SidebarComponent } from './shared/components/sidebar/sidebar.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import { NgxPaginationModule } from 'ngx-pagination'
 import { LibraryComponent } from './shared/components/library/library.component';
 import { SlangNoPipe } from './shared/pipes/slang-no.pipe';
 import { ProjectMarkdownComponent } from './shared/components/project-markdown/project-markdown.component';
+import { SubmitPackageComponent } from './submit-package/submit-package.component';
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import { ProjectMarkdownComponent } from './shared/components/project-markdown/p
     LibraryComponent,
     SlangNoPipe,
     ProjectMarkdownComponent,
+    SubmitPackageComponent,
   ],
   entryComponents: [ProjectMarkdownComponent],
   imports: [
@@ -42,7 +44,7 @@ import { ProjectMarkdownComponent } from './shared/components/project-markdown/p
     NbSpinnerModule,
     NbSearchModule,
     NbDialogModule.forRoot(),
-    // NbEvaIconsModule,
+    NgxPaginationModule,
     FormsModule,
     ReactiveFormsModule,
     NbMenuModule.forRoot()

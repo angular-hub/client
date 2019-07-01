@@ -5,6 +5,9 @@ interface Library {
   stars: number;
   description: string;
   downloads: number;
+  version?: string;
+  last_updated?: string;
+  by?: string;
 }
 
 export default Library;
