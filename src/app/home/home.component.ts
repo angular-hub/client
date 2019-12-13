@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
   }
 
   public getCurrParams(params: Params) {
-    console.log(params);
+    console.log(': HomeComponent -> getCurrParams -> params', params)
   }
 
   public getSearchQuery(query) {

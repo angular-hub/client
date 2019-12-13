@@ -1,7 +1,7 @@
 <!-- <nb-menu [items]="categories" (click)="getLibrariesByCategory($event)"></nb-menu> -->
 
 <ul>
-  <li *ngFor="let item of categories" class=" nav-link">
+  <li *ngFor="let item of categories" class="nav-link">
     <a (click)="getParams(item)" class="text-muted" routerLinkActive='active'>
       {{item.title}}
     </a>

@@ -3,7 +3,7 @@
     <h4 class="text-center mt-1 w-50 text-danger">AngularHub.io
       <br>
       <span class="text-muted ">The portal for all best and most angular libraries, frameworks, utilities
-        etc...
+
       </span>
     </h4>
 
@@ -22,20 +22,15 @@
     <div *ngFor="let item of items ">
       <app-library></app-library>
     </div>
-
-
   </nb-layout-column>
 
   <nb-layout-footer>
     <a [routerLink]="[ '/submit-package' ]" class="text-primary">Submit Package</a>
-
     <a href="" target="_blank" class="ml-2">
       <i class="icon ion-logo-twitter text-muted"></i>
     </a>
-
     <a href="" target="_blank">
       <i class="icon ion-logo-github text-muted "></i>
     </a>
-
   </nb-layout-footer>
 </nb-layout>
