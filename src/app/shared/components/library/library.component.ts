@@ -27,7 +27,7 @@ export class LibraryComponent implements OnInit {
     this.dialogService.open(ProjectMarkdownComponent, {
       context: {
         // title: 'Title',
-        mardown: 'Nothing do so far',
+        markdown: 'Nothing do so far',
         library: this.library
       },
     });

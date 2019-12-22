@@ -7,6 +7,7 @@ interface Library {
   downloads: number;
   version?: string;
   last_updated?: string;
+  link?: string;
   by?: string;
 }
 

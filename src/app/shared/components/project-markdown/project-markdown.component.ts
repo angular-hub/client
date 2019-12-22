@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 export class ProjectMarkdownComponent implements OnInit {
   constructor(protected dialogRef: NbDialogRef<ProjectMarkdownComponent>, private router: Router) { }
   public title: string;
-  public mardown: string;
+  public markdown: string;
   public library: Library;
 
 
@@ -21,8 +21,8 @@ export class ProjectMarkdownComponent implements OnInit {
     this.dialogRef.close();
   }
 
-  goToProjectPage(link: string) {
-    console.log('I will visit said link');
+  goToProjectPage(library: Library) {
+    console.log('I will visit said link', library.link);
     // this.router.navigate([link], {})
   }
 }
